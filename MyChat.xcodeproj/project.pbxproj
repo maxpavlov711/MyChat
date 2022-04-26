@@ -17,6 +17,8 @@
 		5A1929D4281813F700D414AD /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1929D3281813F700D414AD /* UIColor + Extension.swift */; };
 		5A1929D62818164600D414AD /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1929D52818164600D414AD /* UILabel + Extension.swift */; };
 		5A1929D82818174D00D414AD /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1929D72818174D00D414AD /* UIImageView + Extension.swift */; };
+		5A1929DD28181E9100D414AD /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1929DC28181E9100D414AD /* ButtonFormView.swift */; };
+		5A1929DF2818240000D414AD /* StackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1929DE2818240000D414AD /* StackView + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		5A1929D3281813F700D414AD /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		5A1929D52818164600D414AD /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
 		5A1929D72818174D00D414AD /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
+		5A1929DC28181E9100D414AD /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
+		5A1929DE2818240000D414AD /* StackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackView + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,16 +71,34 @@
 				5A1929BB281682B100D414AD /* AppDelegate.swift */,
 				5A1929BD281682B100D414AD /* SceneDelegate.swift */,
 				5A1929BF281682B100D414AD /* AuthViewController.swift */,
-				5A1929D72818174D00D414AD /* UIImageView + Extension.swift */,
-				5A1929D52818164600D414AD /* UILabel + Extension.swift */,
-				5A1929D3281813F700D414AD /* UIColor + Extension.swift */,
-				5A1929D12818132300D414AD /* UIFont + Extension.swift */,
-				5A1929CF281804C700D414AD /* UIButton + Extension.swift */,
+				5A1929DB2818192400D414AD /* Extensions */,
 				5A1929C4281682B300D414AD /* Assets.xcassets */,
 				5A1929C6281682B300D414AD /* LaunchScreen.storyboard */,
 				5A1929C9281682B300D414AD /* Info.plist */,
 			);
 			path = MyChat;
+			sourceTree = "<group>";
+		};
+		5A1929D9281818DE00D414AD /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				5A1929D72818174D00D414AD /* UIImageView + Extension.swift */,
+				5A1929D52818164600D414AD /* UILabel + Extension.swift */,
+				5A1929D3281813F700D414AD /* UIColor + Extension.swift */,
+				5A1929D12818132300D414AD /* UIFont + Extension.swift */,
+				5A1929CF281804C700D414AD /* UIButton + Extension.swift */,
+				5A1929DE2818240000D414AD /* StackView + Extension.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		5A1929DB2818192400D414AD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5A1929DC28181E9100D414AD /* ButtonFormView.swift */,
+				5A1929D9281818DE00D414AD /* UIKit */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +174,8 @@
 				5A1929D22818132300D414AD /* UIFont + Extension.swift in Sources */,
 				5A1929C0281682B100D414AD /* AuthViewController.swift in Sources */,
 				5A1929BC281682B100D414AD /* AppDelegate.swift in Sources */,
+				5A1929DF2818240000D414AD /* StackView + Extension.swift in Sources */,
+				5A1929DD28181E9100D414AD /* ButtonFormView.swift in Sources */,
 				5A1929D62818164600D414AD /* UILabel + Extension.swift in Sources */,
 				5A1929D82818174D00D414AD /* UIImageView + Extension.swift in Sources */,
 				5A1929D4281813F700D414AD /* UIColor + Extension.swift in Sources */,
