@@ -137,9 +137,9 @@
 		5A58E03B281DC97B004EB490 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5A58E03C281DC9AE004EB490 /* MainTabBarController.swift */,
 				5A58E038281DC752004EB490 /* ListViewController.swift */,
 				5A58E03E281DC9F8004EB490 /* PeopleViewController.swift */,
-				5A58E03C281DC9AE004EB490 /* MainTabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

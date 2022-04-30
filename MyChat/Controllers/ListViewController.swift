@@ -14,14 +14,25 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
         setupCollectionView()
+        setupSearchBar()
+    }
+    
+    private func setupSearchBar() {
+        navigationController?.navigationBar.barTintColor = .mainWhite()
+        navigationController?.navigationBar.shadowImage = UIImage()
+        let searchController = UISearchController(searchResultsController: nil)
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.delegate = self
     }
     
     private func setupCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .mainWhite()
         view.addSubview(collectionView)
         
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellId")
@@ -42,10 +53,13 @@ extension ListViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.backgroundColor = .red
         return cell
     }
-    
+}
 
-    
-    
+// MARK: - UISearchBarDelegate
+extension ListViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+    }
 }
 
 // MARK: - SwiftUI
@@ -60,10 +74,10 @@ struct ListVCProvider: PreviewProvider {
     
     struct ConternerView: UIViewControllerRepresentable {
         
-        let listVC = ListViewController()
+        let tabBarVC = MainTabBarController()
         
         func makeUIViewController(context: Context) -> some UIViewController {
-            return listVC
+            return tabBarVC
         }
         
         func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
