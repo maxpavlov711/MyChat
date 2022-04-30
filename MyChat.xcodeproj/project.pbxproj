@@ -20,6 +20,8 @@
 		5A1929DD28181E9100D414AD /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1929DC28181E9100D414AD /* ButtonFormView.swift */; };
 		5A1929DF2818240000D414AD /* StackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1929DE2818240000D414AD /* StackView + Extension.swift */; };
 		5A58E031281D669C004EB490 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E030281D669C004EB490 /* LoginViewController.swift */; };
+		5A58E033281D7347004EB490 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E032281D7347004EB490 /* SetupProfileViewController.swift */; };
+		5A58E035281D85B8004EB490 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E034281D85B8004EB490 /* AddPhotoView.swift */; };
 		5AC09E3928197241006A67E4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC09E3828197241006A67E4 /* SignUpViewController.swift */; };
 		5AC09E3B281974E7006A67E4 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC09E3A281974E7006A67E4 /* OneLineTextField.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +42,8 @@
 		5A1929DC28181E9100D414AD /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
 		5A1929DE2818240000D414AD /* StackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackView + Extension.swift"; sourceTree = "<group>"; };
 		5A58E030281D669C004EB490 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5A58E032281D7347004EB490 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
+		5A58E034281D85B8004EB490 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 		5AC09E3828197241006A67E4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5AC09E3A281974E7006A67E4 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +83,7 @@
 				5A1929BF281682B100D414AD /* AuthViewController.swift */,
 				5AC09E3828197241006A67E4 /* SignUpViewController.swift */,
 				5A58E030281D669C004EB490 /* LoginViewController.swift */,
+				5A58E032281D7347004EB490 /* SetupProfileViewController.swift */,
 				5A1929DB2818192400D414AD /* Extensions */,
 				5A1929C4281682B300D414AD /* Assets.xcassets */,
 				5A1929C6281682B300D414AD /* LaunchScreen.storyboard */,
@@ -103,6 +108,7 @@
 		5A1929DB2818192400D414AD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5A58E034281D85B8004EB490 /* AddPhotoView.swift */,
 				5A1929DC28181E9100D414AD /* ButtonFormView.swift */,
 				5AC09E3A281974E7006A67E4 /* OneLineTextField.swift */,
 				5A1929D9281818DE00D414AD /* UIKit */,
@@ -184,8 +190,10 @@
 				5A1929D22818132300D414AD /* UIFont + Extension.swift in Sources */,
 				5A1929C0281682B100D414AD /* AuthViewController.swift in Sources */,
 				5A1929BC281682B100D414AD /* AppDelegate.swift in Sources */,
+				5A58E033281D7347004EB490 /* SetupProfileViewController.swift in Sources */,
 				5A1929DF2818240000D414AD /* StackView + Extension.swift in Sources */,
 				5A1929DD28181E9100D414AD /* ButtonFormView.swift in Sources */,
+				5A58E035281D85B8004EB490 /* AddPhotoView.swift in Sources */,
 				5A1929D62818164600D414AD /* UILabel + Extension.swift in Sources */,
 				5AC09E3928197241006A67E4 /* SignUpViewController.swift in Sources */,
 				5A1929D82818174D00D414AD /* UIImageView + Extension.swift in Sources */,
