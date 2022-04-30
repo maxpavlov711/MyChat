@@ -23,6 +23,9 @@
 		5A58E033281D7347004EB490 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E032281D7347004EB490 /* SetupProfileViewController.swift */; };
 		5A58E035281D85B8004EB490 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E034281D85B8004EB490 /* AddPhotoView.swift */; };
 		5A58E037281DC090004EB490 /* SegmentedControl + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E036281DC090004EB490 /* SegmentedControl + Extension.swift */; };
+		5A58E039281DC752004EB490 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E038281DC752004EB490 /* ListViewController.swift */; };
+		5A58E03D281DC9AE004EB490 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E03C281DC9AE004EB490 /* MainTabBarController.swift */; };
+		5A58E03F281DC9F8004EB490 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E03E281DC9F8004EB490 /* PeopleViewController.swift */; };
 		5AC09E3928197241006A67E4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC09E3828197241006A67E4 /* SignUpViewController.swift */; };
 		5AC09E3B281974E7006A67E4 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC09E3A281974E7006A67E4 /* OneLineTextField.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +49,9 @@
 		5A58E032281D7347004EB490 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		5A58E034281D85B8004EB490 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 		5A58E036281DC090004EB490 /* SegmentedControl + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegmentedControl + Extension.swift"; sourceTree = "<group>"; };
+		5A58E038281DC752004EB490 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		5A58E03C281DC9AE004EB490 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		5A58E03E281DC9F8004EB490 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		5AC09E3828197241006A67E4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5AC09E3A281974E7006A67E4 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,10 +88,8 @@
 			children = (
 				5A1929BB281682B100D414AD /* AppDelegate.swift */,
 				5A1929BD281682B100D414AD /* SceneDelegate.swift */,
-				5A1929BF281682B100D414AD /* AuthViewController.swift */,
-				5AC09E3828197241006A67E4 /* SignUpViewController.swift */,
-				5A58E030281D669C004EB490 /* LoginViewController.swift */,
-				5A58E032281D7347004EB490 /* SetupProfileViewController.swift */,
+				5A58E03B281DC97B004EB490 /* Controllers */,
+				5A58E03A281DC95E004EB490 /* SignIn & Auth */,
 				5A1929DB2818192400D414AD /* Extensions */,
 				5A1929C4281682B300D414AD /* Assets.xcassets */,
 				5A1929C6281682B300D414AD /* LaunchScreen.storyboard */,
@@ -117,6 +121,27 @@
 				5A1929D9281818DE00D414AD /* UIKit */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5A58E03A281DC95E004EB490 /* SignIn & Auth */ = {
+			isa = PBXGroup;
+			children = (
+				5A1929BF281682B100D414AD /* AuthViewController.swift */,
+				5AC09E3828197241006A67E4 /* SignUpViewController.swift */,
+				5A58E030281D669C004EB490 /* LoginViewController.swift */,
+				5A58E032281D7347004EB490 /* SetupProfileViewController.swift */,
+			);
+			path = "SignIn & Auth";
+			sourceTree = "<group>";
+		};
+		5A58E03B281DC97B004EB490 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5A58E038281DC752004EB490 /* ListViewController.swift */,
+				5A58E03E281DC9F8004EB490 /* PeopleViewController.swift */,
+				5A58E03C281DC9AE004EB490 /* MainTabBarController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,9 +214,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A58E039281DC752004EB490 /* ListViewController.swift in Sources */,
 				5AC09E3B281974E7006A67E4 /* OneLineTextField.swift in Sources */,
+				5A58E03D281DC9AE004EB490 /* MainTabBarController.swift in Sources */,
 				5A1929D22818132300D414AD /* UIFont + Extension.swift in Sources */,
 				5A1929C0281682B100D414AD /* AuthViewController.swift in Sources */,
+				5A58E03F281DC9F8004EB490 /* PeopleViewController.swift in Sources */,
 				5A1929BC281682B100D414AD /* AppDelegate.swift in Sources */,
 				5A58E033281D7347004EB490 /* SetupProfileViewController.swift in Sources */,
 				5A1929DF2818240000D414AD /* StackView + Extension.swift in Sources */,
