@@ -28,6 +28,9 @@
 		5A58E03F281DC9F8004EB490 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E03E281DC9F8004EB490 /* PeopleViewController.swift */; };
 		5AC09E3928197241006A67E4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC09E3828197241006A67E4 /* SignUpViewController.swift */; };
 		5AC09E3B281974E7006A67E4 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC09E3A281974E7006A67E4 /* OneLineTextField.swift */; };
+		5ACEC0C6281EB47F00AA3FED /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 5ACEC0C4281EB47F00AA3FED /* activeChats.json */; };
+		5ACEC0C7281EB47F00AA3FED /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 5ACEC0C5281EB47F00AA3FED /* waitingChats.json */; };
+		5ACEC0C9281EB4CF00AA3FED /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACEC0C8281EB4CF00AA3FED /* Bundle-Decodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		5A58E03E281DC9F8004EB490 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		5AC09E3828197241006A67E4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5AC09E3A281974E7006A67E4 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
+		5ACEC0C4281EB47F00AA3FED /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
+		5ACEC0C5281EB47F00AA3FED /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
+		5ACEC0C8281EB4CF00AA3FED /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,8 @@
 				5A1929CF281804C700D414AD /* UIButton + Extension.swift */,
 				5A1929DE2818240000D414AD /* StackView + Extension.swift */,
 				5A58E036281DC090004EB490 /* SegmentedControl + Extension.swift */,
+				5ACEC0C4281EB47F00AA3FED /* activeChats.json */,
+				5ACEC0C5281EB47F00AA3FED /* waitingChats.json */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -118,6 +126,7 @@
 				5A58E034281D85B8004EB490 /* AddPhotoView.swift */,
 				5A1929DC28181E9100D414AD /* ButtonFormView.swift */,
 				5AC09E3A281974E7006A67E4 /* OneLineTextField.swift */,
+				5ACEC0C8281EB4CF00AA3FED /* Bundle-Decodable.swift */,
 				5A1929D9281818DE00D414AD /* UIKit */,
 			);
 			path = Extensions;
@@ -203,7 +212,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A1929C8281682B300D414AD /* LaunchScreen.storyboard in Resources */,
+				5ACEC0C6281EB47F00AA3FED /* activeChats.json in Resources */,
 				5A1929C5281682B300D414AD /* Assets.xcassets in Resources */,
+				5ACEC0C7281EB47F00AA3FED /* waitingChats.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +232,7 @@
 				5A1929C0281682B100D414AD /* AuthViewController.swift in Sources */,
 				5A58E03F281DC9F8004EB490 /* PeopleViewController.swift in Sources */,
 				5A1929BC281682B100D414AD /* AppDelegate.swift in Sources */,
+				5ACEC0C9281EB4CF00AA3FED /* Bundle-Decodable.swift in Sources */,
 				5A58E033281D7347004EB490 /* SetupProfileViewController.swift in Sources */,
 				5A1929DF2818240000D414AD /* StackView + Extension.swift in Sources */,
 				5A1929DD28181E9100D414AD /* ButtonFormView.swift in Sources */,
