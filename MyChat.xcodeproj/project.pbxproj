@@ -19,6 +19,7 @@
 		5A1929D82818174D00D414AD /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1929D72818174D00D414AD /* UIImageView + Extension.swift */; };
 		5A1929DD28181E9100D414AD /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1929DC28181E9100D414AD /* ButtonFormView.swift */; };
 		5A1929DF2818240000D414AD /* StackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1929DE2818240000D414AD /* StackView + Extension.swift */; };
+		5A2ED012282016E900A85140 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2ED011282016E800A85140 /* SectionHeader.swift */; };
 		5A58E031281D669C004EB490 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E030281D669C004EB490 /* LoginViewController.swift */; };
 		5A58E033281D7347004EB490 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E032281D7347004EB490 /* SetupProfileViewController.swift */; };
 		5A58E035281D85B8004EB490 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E034281D85B8004EB490 /* AddPhotoView.swift */; };
@@ -52,6 +53,7 @@
 		5A1929D72818174D00D414AD /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 		5A1929DC28181E9100D414AD /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
 		5A1929DE2818240000D414AD /* StackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackView + Extension.swift"; sourceTree = "<group>"; };
+		5A2ED011282016E800A85140 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		5A58E030281D669C004EB490 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5A58E032281D7347004EB490 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		5A58E034281D85B8004EB490 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			children = (
 				5A58E03C281DC9AE004EB490 /* MainTabBarController.swift */,
 				5A58E038281DC752004EB490 /* ListViewController.swift */,
+				5A2ED011282016E800A85140 /* SectionHeader.swift */,
 				5A58E03E281DC9F8004EB490 /* PeopleViewController.swift */,
 				5ACEC0CA281EBE1500AA3FED /* Cell */,
 			);
@@ -255,6 +258,7 @@
 			files = (
 				5A58E039281DC752004EB490 /* ListViewController.swift in Sources */,
 				5AC09E3B281974E7006A67E4 /* OneLineTextField.swift in Sources */,
+				5A2ED012282016E900A85140 /* SectionHeader.swift in Sources */,
 				5ACEC0CE281EC78E00AA3FED /* GradientView.swift in Sources */,
 				5A58E03D281DC9AE004EB490 /* MainTabBarController.swift in Sources */,
 				5A1929D22818132300D414AD /* UIFont + Extension.swift in Sources */,

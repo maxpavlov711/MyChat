@@ -24,4 +24,8 @@ extension UIColor {
     static func textFieldLight() -> UIColor {
         return #colorLiteral(red: 0.9019607843, green: 0.9019607843, blue: 0.9019607843, alpha: 1)
     }
+    
+    static func headerColor() -> UIColor {
+        return #colorLiteral(red: 0.5725490196, green: 0.5725490196, blue: 0.5725490196, alpha: 1)
+    }
 }
