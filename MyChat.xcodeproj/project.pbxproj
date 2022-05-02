@@ -33,6 +33,8 @@
 		5ACEC0C9281EB4CF00AA3FED /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACEC0C8281EB4CF00AA3FED /* Bundle-Decodable.swift */; };
 		5ACEC0CC281EBE2900AA3FED /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACEC0CB281EBE2900AA3FED /* ActiveChatCell.swift */; };
 		5ACEC0CE281EC78E00AA3FED /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACEC0CD281EC78E00AA3FED /* GradientView.swift */; };
+		5ACEC0D0281EDCB800AA3FED /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACEC0CF281EDCB800AA3FED /* WaitingChatCell.swift */; };
+		5ACEC0D2281EDE0500AA3FED /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACEC0D1281EDE0500AA3FED /* SelfConfiguringCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		5ACEC0C8281EB4CF00AA3FED /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		5ACEC0CB281EBE2900AA3FED /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
 		5ACEC0CD281EC78E00AA3FED /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		5ACEC0CF281EDCB800AA3FED /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
+		5ACEC0D1281EDE0500AA3FED /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 				5A1929BD281682B100D414AD /* SceneDelegate.swift */,
 				5A58E03B281DC97B004EB490 /* Controllers */,
 				5A58E03A281DC95E004EB490 /* SignIn&Auth */,
+				5ACEC0D3281EDE2100AA3FED /* Protocols */,
 				5A1929DB2818192400D414AD /* Extensions */,
 				5A1929C4281682B300D414AD /* Assets.xcassets */,
 				5A1929C6281682B300D414AD /* LaunchScreen.storyboard */,
@@ -151,10 +156,10 @@
 		5A58E03B281DC97B004EB490 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5ACEC0CA281EBE1500AA3FED /* Cell */,
 				5A58E03C281DC9AE004EB490 /* MainTabBarController.swift */,
 				5A58E038281DC752004EB490 /* ListViewController.swift */,
 				5A58E03E281DC9F8004EB490 /* PeopleViewController.swift */,
+				5ACEC0CA281EBE1500AA3FED /* Cell */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -163,8 +168,17 @@
 			isa = PBXGroup;
 			children = (
 				5ACEC0CB281EBE2900AA3FED /* ActiveChatCell.swift */,
+				5ACEC0CF281EDCB800AA3FED /* WaitingChatCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		5ACEC0D3281EDE2100AA3FED /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5ACEC0D1281EDE0500AA3FED /* SelfConfiguringCell.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +270,8 @@
 				5A1929D62818164600D414AD /* UILabel + Extension.swift in Sources */,
 				5AC09E3928197241006A67E4 /* SignUpViewController.swift in Sources */,
 				5A58E037281DC090004EB490 /* SegmentedControl + Extension.swift in Sources */,
+				5ACEC0D2281EDE0500AA3FED /* SelfConfiguringCell.swift in Sources */,
+				5ACEC0D0281EDCB800AA3FED /* WaitingChatCell.swift in Sources */,
 				5A1929D82818174D00D414AD /* UIImageView + Extension.swift in Sources */,
 				5A1929D4281813F700D414AD /* UIColor + Extension.swift in Sources */,
 				5A1929BE281682B100D414AD /* SceneDelegate.swift in Sources */,
