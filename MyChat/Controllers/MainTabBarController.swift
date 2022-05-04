@@ -23,7 +23,7 @@ class MainTabBarController: UITabBarController {
         let convImage = UIImage(systemName: "bubble.left.and.bubble.right", withConfiguration: boldCofig)!
         let peopleImage = UIImage(systemName: "person.2", withConfiguration: boldCofig)!
         
-        viewControllers = [generateNavigationController(rootViewController: listViewController, title: "Conversations", image: convImage), generateNavigationController(rootViewController: peopleViewController, title: "People", image: peopleImage)]
+        viewControllers = [generateNavigationController(rootViewController: peopleViewController, title: "People", image: peopleImage), generateNavigationController(rootViewController: listViewController, title: "Conversations", image: convImage)]
     }
     
     private func generateNavigationController(rootViewController: UIViewController, title: String, image: UIImage) -> UIViewController {
