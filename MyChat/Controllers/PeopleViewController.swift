@@ -27,7 +27,7 @@ class PeopleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .orange
+        view.backgroundColor = .white
         setupSearchBar()
         setupCollectionView()
         createDataSource()
@@ -42,7 +42,7 @@ class PeopleViewController: UIViewController {
         
         collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseId)
         
-        collectionView.register(UICollectionViewCell .self, forCellWithReuseIdentifier: "cellId")
+        collectionView.register(UserCell .self, forCellWithReuseIdentifier: UserCell.reuseId)
     }
     
     private func setupSearchBar() {
@@ -70,9 +70,7 @@ extension PeopleViewController {
             guard let section = Section(rawValue: indexPath.section) else { fatalError("Unknown section kind")}
             switch section {
             case .users:
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
-                cell.backgroundColor = .systemBlue
-                return cell
+                return self.configure(collectionView: collectionView, cellType: UserCell.self, with: user, for: indexPath)
             }
         })
         

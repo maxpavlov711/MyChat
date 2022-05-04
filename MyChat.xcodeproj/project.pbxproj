@@ -30,6 +30,8 @@
 		5A9E3EDE2822CE850015BCCE /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A9E3EDD2822CE850015BCCE /* users.json */; };
 		5A9E3EE02822CF4A0015BCCE /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E3EDF2822CF4A0015BCCE /* MUser.swift */; };
 		5A9E3EE22822CF5A0015BCCE /* MChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E3EE12822CF5A0015BCCE /* MChat.swift */; };
+		5A9E3EE52822E11A0015BCCE /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E3EE42822E11A0015BCCE /* UserCell.swift */; };
+		5A9E3EE72822E2EB0015BCCE /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E3EE62822E2EB0015BCCE /* UIViewController + Extension.swift */; };
 		5AC09E3928197241006A67E4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC09E3828197241006A67E4 /* SignUpViewController.swift */; };
 		5AC09E3B281974E7006A67E4 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC09E3A281974E7006A67E4 /* OneLineTextField.swift */; };
 		5ACEC0C6281EB47F00AA3FED /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 5ACEC0C4281EB47F00AA3FED /* activeChats.json */; };
@@ -67,6 +69,8 @@
 		5A9E3EDD2822CE850015BCCE /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		5A9E3EDF2822CF4A0015BCCE /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
 		5A9E3EE12822CF5A0015BCCE /* MChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MChat.swift; sourceTree = "<group>"; };
+		5A9E3EE42822E11A0015BCCE /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		5A9E3EE62822E2EB0015BCCE /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		5AC09E3828197241006A67E4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5AC09E3A281974E7006A67E4 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 		5ACEC0C4281EB47F00AA3FED /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 		5A1929D9281818DE00D414AD /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				5A9E3EE62822E2EB0015BCCE /* UIViewController + Extension.swift */,
 				5A1929D72818174D00D414AD /* UIImageView + Extension.swift */,
 				5A1929D52818164600D414AD /* UILabel + Extension.swift */,
 				5A1929D3281813F700D414AD /* UIColor + Extension.swift */,
@@ -197,6 +202,7 @@
 			children = (
 				5ACEC0CB281EBE2900AA3FED /* ActiveChatCell.swift */,
 				5ACEC0CF281EDCB800AA3FED /* WaitingChatCell.swift */,
+				5A9E3EE42822E11A0015BCCE /* UserCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -302,6 +308,8 @@
 				5A1929D62818164600D414AD /* UILabel + Extension.swift in Sources */,
 				5AC09E3928197241006A67E4 /* SignUpViewController.swift in Sources */,
 				5A58E037281DC090004EB490 /* SegmentedControl + Extension.swift in Sources */,
+				5A9E3EE52822E11A0015BCCE /* UserCell.swift in Sources */,
+				5A9E3EE72822E2EB0015BCCE /* UIViewController + Extension.swift in Sources */,
 				5ACEC0D2281EDE0500AA3FED /* SelfConfiguringCell.swift in Sources */,
 				5ACEC0D0281EDCB800AA3FED /* WaitingChatCell.swift in Sources */,
 				5A1929D82818174D00D414AD /* UIImageView + Extension.swift in Sources */,
