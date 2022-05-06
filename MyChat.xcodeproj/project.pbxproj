@@ -21,6 +21,8 @@
 		5A1929DF2818240000D414AD /* StackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1929DE2818240000D414AD /* StackView + Extension.swift */; };
 		5A2ED012282016E900A85140 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2ED011282016E800A85140 /* SectionHeader.swift */; };
 		5A30E47D282528AA00E990CF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A30E47C282528AA00E990CF /* ProfileViewController.swift */; };
+		5A30E47F28252E8500E990CF /* InsertableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A30E47E28252E8500E990CF /* InsertableTextField.swift */; };
+		5A30E481282531AE00E990CF /* UIVIew + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A30E480282531AE00E990CF /* UIVIew + Extension.swift */; };
 		5A58E031281D669C004EB490 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E030281D669C004EB490 /* LoginViewController.swift */; };
 		5A58E033281D7347004EB490 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E032281D7347004EB490 /* SetupProfileViewController.swift */; };
 		5A58E035281D85B8004EB490 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E034281D85B8004EB490 /* AddPhotoView.swift */; };
@@ -61,6 +63,8 @@
 		5A1929DE2818240000D414AD /* StackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackView + Extension.swift"; sourceTree = "<group>"; };
 		5A2ED011282016E800A85140 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		5A30E47C282528AA00E990CF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5A30E47E28252E8500E990CF /* InsertableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertableTextField.swift; sourceTree = "<group>"; };
+		5A30E480282531AE00E990CF /* UIVIew + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew + Extension.swift"; sourceTree = "<group>"; };
 		5A58E030281D669C004EB490 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5A58E032281D7347004EB490 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		5A58E034281D85B8004EB490 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 				5A9E3EE62822E2EB0015BCCE /* UIViewController + Extension.swift */,
 				5A1929D72818174D00D414AD /* UIImageView + Extension.swift */,
 				5A1929D52818164600D414AD /* UILabel + Extension.swift */,
+				5A30E480282531AE00E990CF /* UIVIew + Extension.swift */,
 				5A1929D3281813F700D414AD /* UIColor + Extension.swift */,
 				5A1929D12818132300D414AD /* UIFont + Extension.swift */,
 				5A1929CF281804C700D414AD /* UIButton + Extension.swift */,
@@ -146,6 +151,7 @@
 		5A1929DB2818192400D414AD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5A30E47E28252E8500E990CF /* InsertableTextField.swift */,
 				5A58E034281D85B8004EB490 /* AddPhotoView.swift */,
 				5A1929DC28181E9100D414AD /* ButtonFormView.swift */,
 				5AC09E3A281974E7006A67E4 /* OneLineTextField.swift */,
@@ -309,7 +315,9 @@
 				5A1929DF2818240000D414AD /* StackView + Extension.swift in Sources */,
 				5A1929DD28181E9100D414AD /* ButtonFormView.swift in Sources */,
 				5A58E035281D85B8004EB490 /* AddPhotoView.swift in Sources */,
+				5A30E47F28252E8500E990CF /* InsertableTextField.swift in Sources */,
 				5A1929D62818164600D414AD /* UILabel + Extension.swift in Sources */,
+				5A30E481282531AE00E990CF /* UIVIew + Extension.swift in Sources */,
 				5AC09E3928197241006A67E4 /* SignUpViewController.swift in Sources */,
 				5A58E037281DC090004EB490 /* SegmentedControl + Extension.swift in Sources */,
 				5A9E3EE52822E11A0015BCCE /* UserCell.swift in Sources */,
