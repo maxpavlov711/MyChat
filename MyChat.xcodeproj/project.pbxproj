@@ -23,6 +23,7 @@
 		5A30E47D282528AA00E990CF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A30E47C282528AA00E990CF /* ProfileViewController.swift */; };
 		5A30E47F28252E8500E990CF /* InsertableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A30E47E28252E8500E990CF /* InsertableTextField.swift */; };
 		5A30E481282531AE00E990CF /* UIVIew + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A30E480282531AE00E990CF /* UIVIew + Extension.swift */; };
+		5A30E4832825400700E990CF /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A30E4822825400700E990CF /* ChatRequestViewController.swift */; };
 		5A58E031281D669C004EB490 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E030281D669C004EB490 /* LoginViewController.swift */; };
 		5A58E033281D7347004EB490 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E032281D7347004EB490 /* SetupProfileViewController.swift */; };
 		5A58E035281D85B8004EB490 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E034281D85B8004EB490 /* AddPhotoView.swift */; };
@@ -65,6 +66,7 @@
 		5A30E47C282528AA00E990CF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5A30E47E28252E8500E990CF /* InsertableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertableTextField.swift; sourceTree = "<group>"; };
 		5A30E480282531AE00E990CF /* UIVIew + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew + Extension.swift"; sourceTree = "<group>"; };
+		5A30E4822825400700E990CF /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
 		5A58E030281D669C004EB490 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5A58E032281D7347004EB490 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		5A58E034281D85B8004EB490 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				5A58E038281DC752004EB490 /* ListViewController.swift */,
 				5A58E03E281DC9F8004EB490 /* PeopleViewController.swift */,
 				5A30E47C282528AA00E990CF /* ProfileViewController.swift */,
+				5A30E4822825400700E990CF /* ChatRequestViewController.swift */,
 				5ACEC0CA281EBE1500AA3FED /* Cell */,
 				5A9E3EDC2822CE340015BCCE /* Header */,
 			);
@@ -312,6 +315,7 @@
 				5A30E47D282528AA00E990CF /* ProfileViewController.swift in Sources */,
 				5ACEC0C9281EB4CF00AA3FED /* Bundle-Decodable.swift in Sources */,
 				5A58E033281D7347004EB490 /* SetupProfileViewController.swift in Sources */,
+				5A30E4832825400700E990CF /* ChatRequestViewController.swift in Sources */,
 				5A1929DF2818240000D414AD /* StackView + Extension.swift in Sources */,
 				5A1929DD28181E9100D414AD /* ButtonFormView.swift in Sources */,
 				5A58E035281D85B8004EB490 /* AddPhotoView.swift in Sources */,
