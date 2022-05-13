@@ -40,6 +40,8 @@
 		5AC09E3928197241006A67E4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC09E3828197241006A67E4 /* SignUpViewController.swift */; };
 		5AC09E3B281974E7006A67E4 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC09E3A281974E7006A67E4 /* OneLineTextField.swift */; };
 		5AC7DB8B282EC17F0086E508 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DB8A282EC17F0086E508 /* AuthService.swift */; };
+		5AC7DB8D282ED0060086E508 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DB8C282ED0060086E508 /* Validators.swift */; };
+		5AC7DB8F282ED2D70086E508 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DB8E282ED2D70086E508 /* AuthError.swift */; };
 		5ACEC0C6281EB47F00AA3FED /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 5ACEC0C4281EB47F00AA3FED /* activeChats.json */; };
 		5ACEC0C7281EB47F00AA3FED /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 5ACEC0C5281EB47F00AA3FED /* waitingChats.json */; };
 		5ACEC0C9281EB4CF00AA3FED /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACEC0C8281EB4CF00AA3FED /* Bundle-Decodable.swift */; };
@@ -88,6 +90,8 @@
 		5AC09E3828197241006A67E4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5AC09E3A281974E7006A67E4 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 		5AC7DB8A282EC17F0086E508 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		5AC7DB8C282ED0060086E508 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		5AC7DB8E282ED2D70086E508 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		5ACEC0C4281EB47F00AA3FED /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
 		5ACEC0C5281EB47F00AA3FED /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
 		5ACEC0C8281EB4CF00AA3FED /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 				5A58E03A281DC95E004EB490 /* SignIn&Auth */,
 				5ACEC0D3281EDE2100AA3FED /* Protocols */,
 				5A1929DB2818192400D414AD /* Extensions */,
+				5AC7DB90282ED5430086E508 /* Helpers */,
 				5A1929C4281682B300D414AD /* Assets.xcassets */,
 				5ACEC0C4281EB47F00AA3FED /* activeChats.json */,
 				5A9E3EDD2822CE850015BCCE /* users.json */,
@@ -236,6 +241,15 @@
 				5AC7DB8A282EC17F0086E508 /* AuthService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		5AC7DB90282ED5430086E508 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5AC7DB8C282ED0060086E508 /* Validators.swift */,
+				5AC7DB8E282ED2D70086E508 /* AuthError.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		5ACEC0CA281EBE1500AA3FED /* Cell */ = {
@@ -389,8 +403,10 @@
 				5ACEC0CE281EC78E00AA3FED /* GradientView.swift in Sources */,
 				5A58E03D281DC9AE004EB490 /* MainTabBarController.swift in Sources */,
 				5A1929D22818132300D414AD /* UIFont + Extension.swift in Sources */,
+				5AC7DB8F282ED2D70086E508 /* AuthError.swift in Sources */,
 				5A9E3EE22822CF5A0015BCCE /* MChat.swift in Sources */,
 				5A9E3EE02822CF4A0015BCCE /* MUser.swift in Sources */,
+				5AC7DB8D282ED0060086E508 /* Validators.swift in Sources */,
 				5ACEC0CC281EBE2900AA3FED /* ActiveChatCell.swift in Sources */,
 				5A1929C0281682B100D414AD /* AuthViewController.swift in Sources */,
 				5A58E03F281DC9F8004EB490 /* PeopleViewController.swift in Sources */,
