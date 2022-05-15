@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SetupProfileViewController: UIViewController {
     
@@ -14,7 +15,7 @@ class SetupProfileViewController: UIViewController {
     let fullNameLabel = UILabel(text: "Full name")
     let aboutMeLabel = UILabel(text: "About me")
     let sexLabel = UILabel(text: "Sex")
-
+    
     let fullNameTextField = OneLineTextField(font: .avenir20())
     let aboutMeTextFeild = OneLineTextField(font: .avenir20())
     
@@ -24,11 +25,43 @@ class SetupProfileViewController: UIViewController {
     
     let fullImageView = AddPhotoView()
     
+    private let currentUser: User
+    
+    init(currentUser: User) {
+        self.currentUser = currentUser
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
         setupConstraints()
+        
+        goToChatsButton.addTarget(self, action: #selector(goToChatsButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func goToChatsButtonTapped() {
+        guard let userEmail = currentUser.email else { return }
+        
+        FirestoreService.shared.saveProfileWith(id: currentUser.uid,
+                                                email: userEmail,
+                                                username: fullNameTextField.text,
+                                                avatarImageString: "nil",
+                                                description: aboutMeTextFeild.text,
+                                                sex: sexSegmentedControl.titleForSegment(at: sexSegmentedControl.selectedSegmentIndex)) { result in
+            switch result {
+            case .success(let muser):
+                self.showAlert(with: "Успешно", and: "Приятного общения!")
+                print(muser)
+            case .failure(let error):
+                self.showAlert(with: "Ошибка", and: error.localizedDescription)
+            }
+        }
     }
 }
 
@@ -90,7 +123,7 @@ struct SetupProfileVCProvider: PreviewProvider {
     
     struct ConternerView: UIViewControllerRepresentable {
         
-        let setupProfileVC = SetupProfileViewController()
+        let setupProfileVC = SetupProfileViewController(currentUser: Auth.auth().currentUser!)
         
         func makeUIViewController(context: Context) -> some UIViewController {
             return setupProfileVC

@@ -42,6 +42,9 @@
 		5AC7DB8B282EC17F0086E508 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DB8A282EC17F0086E508 /* AuthService.swift */; };
 		5AC7DB8D282ED0060086E508 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DB8C282ED0060086E508 /* Validators.swift */; };
 		5AC7DB8F282ED2D70086E508 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DB8E282ED2D70086E508 /* AuthError.swift */; };
+		5AC7DB92282FE8AC0086E508 /* AuthNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DB91282FE8AC0086E508 /* AuthNavigationDelegate.swift */; };
+		5AC7DB942831149C0086E508 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DB932831149C0086E508 /* FirestoreService.swift */; };
+		5AC7DB96283116DF0086E508 /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DB95283116DF0086E508 /* UserError.swift */; };
 		5ACEC0C6281EB47F00AA3FED /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 5ACEC0C4281EB47F00AA3FED /* activeChats.json */; };
 		5ACEC0C7281EB47F00AA3FED /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 5ACEC0C5281EB47F00AA3FED /* waitingChats.json */; };
 		5ACEC0C9281EB4CF00AA3FED /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACEC0C8281EB4CF00AA3FED /* Bundle-Decodable.swift */; };
@@ -92,6 +95,9 @@
 		5AC7DB8A282EC17F0086E508 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		5AC7DB8C282ED0060086E508 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		5AC7DB8E282ED2D70086E508 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
+		5AC7DB91282FE8AC0086E508 /* AuthNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigationDelegate.swift; sourceTree = "<group>"; };
+		5AC7DB932831149C0086E508 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		5AC7DB95283116DF0086E508 /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
 		5ACEC0C4281EB47F00AA3FED /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
 		5ACEC0C5281EB47F00AA3FED /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
 		5ACEC0C8281EB4CF00AA3FED /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
@@ -239,6 +245,7 @@
 			children = (
 				5A9E3EE32822CFC60015BCCE /* Model */,
 				5AC7DB8A282EC17F0086E508 /* AuthService.swift */,
+				5AC7DB932831149C0086E508 /* FirestoreService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -248,6 +255,7 @@
 			children = (
 				5AC7DB8C282ED0060086E508 /* Validators.swift */,
 				5AC7DB8E282ED2D70086E508 /* AuthError.swift */,
+				5AC7DB95283116DF0086E508 /* UserError.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -266,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				5ACEC0D1281EDE0500AA3FED /* SelfConfiguringCell.swift */,
+				5AC7DB91282FE8AC0086E508 /* AuthNavigationDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -409,8 +418,10 @@
 				5AC7DB8D282ED0060086E508 /* Validators.swift in Sources */,
 				5ACEC0CC281EBE2900AA3FED /* ActiveChatCell.swift in Sources */,
 				5A1929C0281682B100D414AD /* AuthViewController.swift in Sources */,
+				5AC7DB92282FE8AC0086E508 /* AuthNavigationDelegate.swift in Sources */,
 				5A58E03F281DC9F8004EB490 /* PeopleViewController.swift in Sources */,
 				5A1929BC281682B100D414AD /* AppDelegate.swift in Sources */,
+				5AC7DB942831149C0086E508 /* FirestoreService.swift in Sources */,
 				5A30E47D282528AA00E990CF /* ProfileViewController.swift in Sources */,
 				5ACEC0C9281EB4CF00AA3FED /* Bundle-Decodable.swift in Sources */,
 				5A58E033281D7347004EB490 /* SetupProfileViewController.swift in Sources */,
@@ -418,6 +429,7 @@
 				5A1929DF2818240000D414AD /* StackView + Extension.swift in Sources */,
 				5A1929DD28181E9100D414AD /* ButtonFormView.swift in Sources */,
 				5A58E035281D85B8004EB490 /* AddPhotoView.swift in Sources */,
+				5AC7DB96283116DF0086E508 /* UserError.swift in Sources */,
 				5A30E47F28252E8500E990CF /* InsertableTextField.swift in Sources */,
 				5A1929D62818164600D414AD /* UILabel + Extension.swift in Sources */,
 				5A30E481282531AE00E990CF /* UIVIew + Extension.swift in Sources */,
