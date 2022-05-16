@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import GoogleSignIn
 
 class AuthService {
     
@@ -30,28 +31,46 @@ class AuthService {
         }
     }
     
-    func register(email: String?, password: String?, confirmPassword: String?, completion: @escaping (Result<User, Error>) -> Void) {
+    func googleLogin(user: GIDGoogleUser!, error: Error!, completion: @escaping (Result<User, Error>) -> Void) {
+        guard let authentication = user?.authentication, let idToken = authentication.idToken else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: authentication.accessToken)
         
-        guard Validators.isFilled(email: email, password: password, confirmPassword: confirmPassword) else { completion(.failure(AuthError.notFilled))
-            return
+        Auth.auth().signIn(with: credential) { result, error in
+            
+            guard let result = result else {
+                completion(.failure(error!))
+                return
+            }
+            print("Successfully logged into Firebase wirh Google")
+            completion(.success(result.user))
+            
         }
+    }
         
-        guard password!.lowercased() == confirmPassword!.lowercased() else {
-            completion(.failure(AuthError.passwordNotMatched))
-            return
-        }
-        
-        guard Validators.isSimpleEmail(email!) else {
-            completion(.failure(AuthError.invalidEmail))
-            return
-        }
-        
-        auth.createUser(withEmail: email!, password: password!) { result, error in
-            guard let result = result else { completion(.failure(error!))
+        func register(email: String?, password: String?, confirmPassword: String?, completion: @escaping (Result<User, Error>) -> Void) {
+            
+            guard Validators.isFilled(email: email, password: password, confirmPassword: confirmPassword) else { completion(.failure(AuthError.notFilled))
                 return
             }
             
-            completion(.success(result.user))
+            guard password!.lowercased() == confirmPassword!.lowercased() else {
+                completion(.failure(AuthError.passwordNotMatched))
+                return
+            }
+            
+            guard Validators.isSimpleEmail(email!) else {
+                completion(.failure(AuthError.invalidEmail))
+                return
+            }
+            
+            auth.createUser(withEmail: email!, password: password!) { result, error in
+                guard let result = result else { completion(.failure(error!))
+                    return
+                }
+                
+                completion(.success(result.user))
+            }
         }
     }
-}
+    
+    
