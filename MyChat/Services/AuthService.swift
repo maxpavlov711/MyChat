@@ -43,7 +43,6 @@ class AuthService {
             }
             print("Successfully logged into Firebase wirh Google")
             completion(.success(result.user))
-            
         }
     }
         

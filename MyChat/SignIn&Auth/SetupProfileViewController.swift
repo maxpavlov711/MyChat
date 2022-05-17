@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseStorage
 
 class SetupProfileViewController: UIViewController {
     
@@ -48,27 +49,34 @@ class SetupProfileViewController: UIViewController {
         setupConstraints()
         
         goToChatsButton.addTarget(self, action: #selector(goToChatsButtonTapped), for: .touchUpInside)
+        fullImageView.plusButton.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
     }
     
-    @objc func goToChatsButtonTapped() {
-        guard let userEmail = currentUser.email else { return }
-        
-        FirestoreService.shared.saveProfileWith(id: currentUser.uid,
-                                                email: userEmail,
-                                                username: fullNameTextField.text,
-                                                avatarImageString: "nil",
-                                                description: aboutMeTextFeild.text,
-                                                sex: sexSegmentedControl.titleForSegment(at: sexSegmentedControl.selectedSegmentIndex)) { result in
-            switch result {
-            case .success(let muser):
-                self.showAlert(with: "Успешно", and: "Данные сохранены!") {
-                    let mainTabBar = MainTabBarController(currentUser: muser)
-                    mainTabBar.modalPresentationStyle = .fullScreen
-                    self.present(mainTabBar, animated: true)
+    @objc private func plusButtonTapped() {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = .photoLibrary
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    @objc private func goToChatsButtonTapped() {
+        FirestoreService.shared.saveProfileWith(
+            id: currentUser.uid,
+            email: currentUser.email!,
+            username: fullNameTextField.text,
+            avatarImage: fullImageView.circleImageView.image,
+            description: aboutMeTextFeild.text,
+            sex: sexSegmentedControl.titleForSegment(at: sexSegmentedControl.selectedSegmentIndex)) { result in
+                switch result {
+                case .success(let muser):
+                    self.showAlert(with: "Успешно!", and: "Данные сохранены!", completion: {
+                        let mainTabBar = MainTabBarController(currentUser: muser)
+                        mainTabBar.modalPresentationStyle = .fullScreen
+                        self.present(mainTabBar, animated: true, completion: nil)
+                    })
+                case .failure(let error):
+                    self.showAlert(with: "Ошибка!", and: error.localizedDescription)
                 }
-            case .failure(let error):
-                self.showAlert(with: "Ошибка", and: error.localizedDescription)
-            }
         }
     }
 }
@@ -116,6 +124,16 @@ extension SetupProfileViewController {
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
+    }
+}
+
+// MARK: - UIImagePickerControllerDelegate
+extension SetupProfileViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        picker.dismiss(animated: true, completion: nil)
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        fullImageView.circleImageView.image = image
     }
 }
 

@@ -20,6 +20,8 @@
 		5A1929DD28181E9100D414AD /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1929DC28181E9100D414AD /* ButtonFormView.swift */; };
 		5A1929DF2818240000D414AD /* StackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1929DE2818240000D414AD /* StackView + Extension.swift */; };
 		5A2B02F02832C503000D781D /* UIApplication + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B02EF2832C503000D781D /* UIApplication + Extension.swift */; };
+		5A2B02F22832CAC9000D781D /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B02F12832CAC9000D781D /* StorageService.swift */; };
+		5A2B02F42832CEBF000D781D /* UIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B02F32832CEBF000D781D /* UIImage + Extension.swift */; };
 		5A2ED012282016E900A85140 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2ED011282016E800A85140 /* SectionHeader.swift */; };
 		5A30E47D282528AA00E990CF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A30E47C282528AA00E990CF /* ProfileViewController.swift */; };
 		5A30E47F28252E8500E990CF /* InsertableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A30E47E28252E8500E990CF /* InsertableTextField.swift */; };
@@ -74,6 +76,8 @@
 		5A1929DC28181E9100D414AD /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
 		5A1929DE2818240000D414AD /* StackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackView + Extension.swift"; sourceTree = "<group>"; };
 		5A2B02EF2832C503000D781D /* UIApplication + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication + Extension.swift"; sourceTree = "<group>"; };
+		5A2B02F12832CAC9000D781D /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		5A2B02F32832CEBF000D781D /* UIImage + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Extension.swift"; sourceTree = "<group>"; };
 		5A2ED011282016E800A85140 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		5A30E47C282528AA00E990CF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5A30E47E28252E8500E990CF /* InsertableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertableTextField.swift; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 				5A1929CF281804C700D414AD /* UIButton + Extension.swift */,
 				5A1929DE2818240000D414AD /* StackView + Extension.swift */,
 				5A58E036281DC090004EB490 /* SegmentedControl + Extension.swift */,
+				5A2B02F32832CEBF000D781D /* UIImage + Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 				5A9E3EE32822CFC60015BCCE /* Model */,
 				5AC7DB8A282EC17F0086E508 /* AuthService.swift */,
 				5AC7DB932831149C0086E508 /* FirestoreService.swift */,
+				5A2B02F12832CAC9000D781D /* StorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -437,12 +443,14 @@
 				5A30E47F28252E8500E990CF /* InsertableTextField.swift in Sources */,
 				5A1929D62818164600D414AD /* UILabel + Extension.swift in Sources */,
 				5A30E481282531AE00E990CF /* UIVIew + Extension.swift in Sources */,
+				5A2B02F22832CAC9000D781D /* StorageService.swift in Sources */,
 				5AC09E3928197241006A67E4 /* SignUpViewController.swift in Sources */,
 				5A58E037281DC090004EB490 /* SegmentedControl + Extension.swift in Sources */,
 				5A9E3EE52822E11A0015BCCE /* UserCell.swift in Sources */,
 				5A9E3EE72822E2EB0015BCCE /* UIViewController + Extension.swift in Sources */,
 				5ACEC0D2281EDE0500AA3FED /* SelfConfiguringCell.swift in Sources */,
 				5ACEC0D0281EDCB800AA3FED /* WaitingChatCell.swift in Sources */,
+				5A2B02F42832CEBF000D781D /* UIImage + Extension.swift in Sources */,
 				5A1929D82818174D00D414AD /* UIImageView + Extension.swift in Sources */,
 				5A1929D4281813F700D414AD /* UIColor + Extension.swift in Sources */,
 				5A1929BE281682B100D414AD /* SceneDelegate.swift in Sources */,
