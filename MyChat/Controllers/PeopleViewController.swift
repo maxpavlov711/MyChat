@@ -7,11 +7,14 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class PeopleViewController: UIViewController {
     
 //    let users = Bundle.main.decode([MUser].self, from: "users.json")
-    let users = [MUser]()
+    var users = [MUser]()
+    private var usersListener: ListenerRegistration?
+    
     var collectionView: UICollectionView!
     var dataSourse: UICollectionViewDiffableDataSource<Section, MUser>!
     
@@ -34,6 +37,10 @@ class PeopleViewController: UIViewController {
         title = currentUser.username
     }
     
+    deinit {
+        usersListener?.remove()
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -45,9 +52,18 @@ class PeopleViewController: UIViewController {
         setupSearchBar()
         setupCollectionView()
         createDataSource()
-        reloadData(with: nil)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(signOut))
+        
+        usersListener = ListenerService.shared.usersObserve(users: users, completion: { result in
+            switch result {
+            case .success(let users):
+                self.users = users
+                self.reloadData(with: nil)
+            case .failure(let error):
+                self.showAlert(with: "Ошибка!", and: error.localizedDescription)
+            }
+        })
     }
     
     @objc private func signOut() {
