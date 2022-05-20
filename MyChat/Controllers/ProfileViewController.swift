@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ProfileViewController: UIViewController {
     
@@ -14,6 +15,20 @@ class ProfileViewController: UIViewController {
     let nameLabel = UILabel(text: "Max Pavlov", font: .systemFont(ofSize: 20, weight: .light))
     let aboutMeLabel = UILabel(text: "You have the opportunity to chat with the best man in the world", font: .systemFont(ofSize: 16, weight: .light))
     let myTextField = InsetableTextField()
+    
+    private let user: MUser
+    
+    init(user: MUser) {
+        self.user = user
+        self.nameLabel.text = user.username
+        self.aboutMeLabel.text = user.description
+        self.imageView.sd_setImage(with: URL(string: user.avatarStringURL), completed: nil)
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +54,18 @@ class ProfileViewController: UIViewController {
     
     @objc private func sendMessage() {
         print(#function)
+        guard let message = myTextField.text, message != "" else { return }
+        
+        self.dismiss(animated: true) {
+            FirestoreService.shared.createWaitingChat(message: message, receiver: self.user) { result in
+                switch result {
+                case .success():
+                    UIApplication.getTopViewController()?.showAlert(with: "Успешно!", and: "Ваше сообщения для \(self.user.username) было отправлено.")
+                case .failure(let error):
+                    UIApplication.getTopViewController()?.showAlert(with: "Ошибка", and: error.localizedDescription)
+                }
+            }
+        }
     }
 }
 
@@ -85,26 +112,26 @@ extension ProfileViewController {
     }
 }
 
-// MARK: - SwiftUI
-import SwiftUI
-
-struct ProfileVCProvider: PreviewProvider {
-    static var previews: some View {
-        Group {
-            ConternerView().edgesIgnoringSafeArea(.all).previewInterfaceOrientation(.portrait)
-        }
-    }
-    
-    struct ConternerView: UIViewControllerRepresentable {
-        
-        let profileVC = ProfileViewController()
-        
-        func makeUIViewController(context: Context) -> some UIViewController {
-            return profileVC
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-            
-        }
-    }
-}
+//// MARK: - SwiftUI
+//import SwiftUI
+//
+//struct ProfileVCProvider: PreviewProvider {
+//    static var previews: some View {
+//        Group {
+//            ConternerView().edgesIgnoringSafeArea(.all).previewInterfaceOrientation(.portrait)
+//        }
+//    }
+//
+//    struct ConternerView: UIViewControllerRepresentable {
+//
+//        let profileVC = ProfileViewController()
+//
+//        func makeUIViewController(context: Context) -> some UIViewController {
+//            return profileVC
+//        }
+//
+//        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+//
+//        }
+//    }
+//}

@@ -68,26 +68,26 @@ class InsetableTextField: UITextField {
     
 }
 
-// MARK: - SwiftUI
-import SwiftUI
-
-struct TextFieldProvider: PreviewProvider {
-    static var previews: some View {
-        Group {
-            ConternerView().edgesIgnoringSafeArea(.all).previewInterfaceOrientation(.portrait)
-        }
-    }
-    
-    struct ConternerView: UIViewControllerRepresentable {
-        
-        let profileVC = ProfileViewController()
-        
-        func makeUIViewController(context: Context) -> some UIViewController {
-            return profileVC
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-            
-        }
-    }
-}
+//// MARK: - SwiftUI
+//import SwiftUI
+//
+//struct TextFieldProvider: PreviewProvider {
+//    static var previews: some View {
+//        Group {
+//            ConternerView().edgesIgnoringSafeArea(.all).previewInterfaceOrientation(.portrait)
+//        }
+//    }
+//    
+//    struct ConternerView: UIViewControllerRepresentable {
+//        
+//        let profileVC = ProfileViewController()
+//        
+//        func makeUIViewController(context: Context) -> some UIViewController {
+//            return profileVC
+//        }
+//        
+//        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+//            
+//        }
+//    }
+//}
