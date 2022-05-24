@@ -25,6 +25,7 @@ class WaitingChatCell: UICollectionViewCell, SelfConfiguringCell {
     func configure<U>(with value: U) where U : Hashable {
         guard let mchat: MChat = value as? MChat else { return }
 //        friendImageView.image = UIImage(named: mchat.userImageString)
+        friendImageView.sd_setImage(with: URL(string: mchat.friendAvatarStringURL), completed: nil)
     }
     
     required init?(coder: NSCoder) {
