@@ -13,10 +13,11 @@ class ListViewController: UIViewController {
 //    let activeChats = Bundle.main.decode([MChat].self, from: "activeChats.json")
 //    let waitingChats = Bundle.main.decode([MChat].self, from: "waitingChats.json")
     
-    let activeChats = [MChat]()
+    var activeChats = [MChat]()
     var waitingChats = [MChat]()
     
-    private var waitingChatsListerner: ListenerRegistration?
+    private var waitingChatsListener: ListenerRegistration?
+    private var activeChatsListener: ListenerRegistration?
     
     enum Section: Int, CaseIterable {
         case waitingChats
@@ -48,7 +49,8 @@ class ListViewController: UIViewController {
     }
     
     deinit {
-        waitingChatsListerner?.remove()
+        waitingChatsListener?.remove()
+        activeChatsListener?.remove()
     }
     
     override func viewDidLoad() {
@@ -59,15 +61,25 @@ class ListViewController: UIViewController {
         createDataSource()
         reloadData()
         
-        waitingChatsListerner = ListenerService.shared.waitingChatsObserve(chats: waitingChats, completion: { result in
+        waitingChatsListener = ListenerService.shared.waitingChatsObserve(chats: waitingChats, completion: { (result) in
             switch result {
             case .success(let chats):
                 if self.waitingChats != [], self.waitingChats.count <= chats.count {
                     let chatRequestVC = ChatRequestViewController(mchat: chats.last!)
                     chatRequestVC.delegate = self
-                    self.present(chatRequestVC, animated: true)
+                    self.present(chatRequestVC, animated: true, completion: nil)
                 }
                 self.waitingChats = chats
+                self.reloadData()
+            case .failure(let error):
+                self.showAlert(with: "Ошибка!", and: error.localizedDescription)
+            }
+        })
+        
+        activeChatsListener = ListenerService.shared.activeChatsObserve(chats: activeChats, completion: { (result) in
+            switch result {
+            case .success(let chats):
+                self.activeChats = chats
                 self.reloadData()
             case .failure(let error):
                 self.showAlert(with: "Ошибка!", and: error.localizedDescription)
@@ -222,11 +234,12 @@ extension ListViewController: UICollectionViewDelegate {
     }
 }
 
+// MARK: - WaitingChatNavigation
 extension ListViewController: WaitingChatNavigation {
     func removeWaitingChat(chat: MChat) {
-        FirestoreService.shared.deleteWaitingChat(chat: chat) { result in
+        FirestoreService.shared.deleteWaitingChat(chat: chat) { (result) in
             switch result {
-            case .success():
+            case .success:
                 self.showAlert(with: "Успешно!", and: "Чат с \(chat.friendUsername) был удален")
             case .failure(let error):
                 self.showAlert(with: "Ошибка!", and: error.localizedDescription)
@@ -234,8 +247,16 @@ extension ListViewController: WaitingChatNavigation {
         }
     }
     
-    func chatToActive(chat: MChat) {
+    func changeToActive(chat: MChat) {
         print(#function)
+        FirestoreService.shared.changeToActive(chat: chat) { (result) in
+            switch result {
+            case .success:
+                self.showAlert(with: "Успешно!", and: "Приятного общения с \(chat.friendUsername).")
+            case .failure(let error):
+                self.showAlert(with: "Ошибка!", and: error.localizedDescription)
+            }
+        }
     }
 }
 

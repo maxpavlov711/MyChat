@@ -11,14 +11,14 @@ import FirebaseFirestore
 struct MMessage: Hashable {
     let content: String
     let senderId: String
-    let senderUserName: String
+    let senderUsername: String
     var sentDate: Date
     let id: String?
     
     init(user: MUser, content: String) {
         self.content = content
         senderId = user.id
-        senderUserName = user.username
+        senderUsername = user.username
         sentDate = Date()
         id = nil
     }
@@ -33,15 +33,15 @@ struct MMessage: Hashable {
         self.id = document.documentID
         self.sentDate = sentDate.dateValue()
         self.senderId = senderId
-        self.senderUserName = senderName
+        self.senderUsername = senderName
         self.content = content
     }
     
     var representation: [String: Any] {
         let rep: [String: Any] = [
             "created": sentDate,
-            "senderId": senderId,
-            "senderName": senderUserName,
+            "senderID": senderId,
+            "senderName": senderUsername,
             "content": content
         ]
         return rep
