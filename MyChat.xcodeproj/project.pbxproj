@@ -43,6 +43,7 @@
 		5A9E3EE22822CF5A0015BCCE /* MChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E3EE12822CF5A0015BCCE /* MChat.swift */; };
 		5A9E3EE52822E11A0015BCCE /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E3EE42822E11A0015BCCE /* UserCell.swift */; };
 		5A9E3EE72822E2EB0015BCCE /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E3EE62822E2EB0015BCCE /* UIViewController + Extension.swift */; };
+		5AB653B7283E8DC40075B998 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB653B6283E8DC40075B998 /* ChatsViewController.swift */; };
 		5AC09E3928197241006A67E4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC09E3828197241006A67E4 /* SignUpViewController.swift */; };
 		5AC09E3B281974E7006A67E4 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC09E3A281974E7006A67E4 /* OneLineTextField.swift */; };
 		5AC7DB8B282EC17F0086E508 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DB8A282EC17F0086E508 /* AuthService.swift */; };
@@ -102,6 +103,7 @@
 		5A9E3EE12822CF5A0015BCCE /* MChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MChat.swift; sourceTree = "<group>"; };
 		5A9E3EE42822E11A0015BCCE /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		5A9E3EE62822E2EB0015BCCE /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		5AB653B6283E8DC40075B998 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		5AC09E3828197241006A67E4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5AC09E3A281974E7006A67E4 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 		5AC7DB8A282EC17F0086E508 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				5A58E03E281DC9F8004EB490 /* PeopleViewController.swift */,
 				5A30E47C282528AA00E990CF /* ProfileViewController.swift */,
 				5A30E4822825400700E990CF /* ChatRequestViewController.swift */,
+				5AB653B6283E8DC40075B998 /* ChatsViewController.swift */,
 				5ACEC0CA281EBE1500AA3FED /* Cell */,
 				5A9E3EDC2822CE340015BCCE /* Header */,
 			);
@@ -452,6 +455,7 @@
 				5A58E035281D85B8004EB490 /* AddPhotoView.swift in Sources */,
 				5AC7DB96283116DF0086E508 /* UserError.swift in Sources */,
 				5A30E47F28252E8500E990CF /* InsertableTextField.swift in Sources */,
+				5AB653B7283E8DC40075B998 /* ChatsViewController.swift in Sources */,
 				5A1929D62818164600D414AD /* UILabel + Extension.swift in Sources */,
 				5A30E481282531AE00E990CF /* UIVIew + Extension.swift in Sources */,
 				5A2B02F22832CAC9000D781D /* StorageService.swift in Sources */,

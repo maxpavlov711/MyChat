@@ -13,8 +13,8 @@ class ListViewController: UIViewController {
 //    let activeChats = Bundle.main.decode([MChat].self, from: "activeChats.json")
 //    let waitingChats = Bundle.main.decode([MChat].self, from: "waitingChats.json")
     
-    var activeChats = [MChat]()
     var waitingChats = [MChat]()
+    var activeChats = [MChat]()
     
     private var waitingChatsListener: ListenerRegistration?
     private var activeChatsListener: ListenerRegistration?
@@ -230,6 +230,8 @@ extension ListViewController: UICollectionViewDelegate {
             self.present(chatRequestVC, animated: true)
         case .activeChats:
             print(indexPath)
+            let chatsVC = ChatsViewController(user: currentUser, chat: chat)
+            navigationController?.pushViewController(chatsVC, animated: true)
         }
     }
 }
