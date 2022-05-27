@@ -37,6 +37,7 @@
 		5A58E039281DC752004EB490 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E038281DC752004EB490 /* ListViewController.swift */; };
 		5A58E03D281DC9AE004EB490 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E03C281DC9AE004EB490 /* MainTabBarController.swift */; };
 		5A58E03F281DC9F8004EB490 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A58E03E281DC9F8004EB490 /* PeopleViewController.swift */; };
+		5A8E3CAB28413C2800868880 /* UIScrollView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E3CAA28413C2800868880 /* UIScrollView + Extension.swift */; };
 		5A90599D283CF2B400696941 /* WaitingChatNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A90599C283CF2B400696941 /* WaitingChatNavigation.swift */; };
 		5A9E3EDE2822CE850015BCCE /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A9E3EDD2822CE850015BCCE /* users.json */; };
 		5A9E3EE02822CF4A0015BCCE /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E3EDF2822CF4A0015BCCE /* MUser.swift */; };
@@ -97,6 +98,7 @@
 		5A58E038281DC752004EB490 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		5A58E03C281DC9AE004EB490 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		5A58E03E281DC9F8004EB490 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		5A8E3CAA28413C2800868880 /* UIScrollView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView + Extension.swift"; sourceTree = "<group>"; };
 		5A90599C283CF2B400696941 /* WaitingChatNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatNavigation.swift; sourceTree = "<group>"; };
 		5A9E3EDD2822CE850015BCCE /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		5A9E3EDF2822CF4A0015BCCE /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				5A1929DE2818240000D414AD /* StackView + Extension.swift */,
 				5A58E036281DC090004EB490 /* SegmentedControl + Extension.swift */,
 				5A2B02F32832CEBF000D781D /* UIImage + Extension.swift */,
+				5A8E3CAA28413C2800868880 /* UIScrollView + Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				5A30E47D282528AA00E990CF /* ProfileViewController.swift in Sources */,
 				5ACEC0C9281EB4CF00AA3FED /* Bundle-Decodable.swift in Sources */,
 				5A58E033281D7347004EB490 /* SetupProfileViewController.swift in Sources */,
+				5A8E3CAB28413C2800868880 /* UIScrollView + Extension.swift in Sources */,
 				5A30E4832825400700E990CF /* ChatRequestViewController.swift in Sources */,
 				5A2B02F62836A39B000D781D /* ListenerService.swift in Sources */,
 				5A1929DF2818240000D414AD /* StackView + Extension.swift in Sources */,
